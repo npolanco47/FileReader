@@ -13,7 +13,7 @@ int main()
   int number_characters = 0;
   char answer = ' ';
   do{
-  cout<<" What file do you want to open? ";
+  cout<<"What file do you want to open? ";
   getline(cin, fileName);
  
   fileStream.open(fileName.c_str(),ios::in);//STEP 1: open the fileStream for input, using the fileName specified
@@ -24,14 +24,15 @@ int main()
    
    while(!fileStream.eof())
    {
-     getline(fileStream, line);
-      counter=counter + 1;
-      number_characters = line.length() + number_characters;
+   getline(fileStream, line);
+   line.length();
 
     if(!line.empty())
     {
      cout << line << endl;
-  }   
+      counter = counter +1 ;
+      number_characters=line.length() + number_characters;
+    }   
    
     
   }
@@ -46,6 +47,8 @@ int main()
      cout <<"File: "<< fileName<< endl;
      cout <<"Lines: " << counter<< endl;
      cout <<"Characters: " << number_characters<< endl;
+counter =0;
+number_characters=0;
 
     //STEP 3: repeat the following until the end-of-file (eof) has been reached...
     // 3A: read a line from fileStream into the variable line
