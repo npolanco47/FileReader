@@ -55,7 +55,7 @@ number_characters=0;
     // 3B: display the line, followed by an endline
   
    //STEP 4: close the fileStream
-  cout << "Analyze another file (y/n)?";
+  cout << "Analyze another file (y/n)? ";
   cin >> answer;
   cin.ignore();
 } while (answer == 'y'|| answer == 'Y');
